@@ -1,29 +1,53 @@
-/////////// HOW TO GET ALL PRODUCTS ///////////
-
-const baseUrl = "http://localhost:1337/";
+import { baseUrl } from "./settings/api.js";
 
 const productsUrl = baseUrl + "products";
 
-//// products cards
-(async function () {
-  const container = document.querySelector(".product-container");
+const containerFeatured = document.querySelector(".featured");
 
+//// products cards
+async function getFeatured() {
   try {
     const response = await fetch(productsUrl);
     const json = await response.json();
 
-    container.innerHTML = "";
+    console.log(json);
 
-    json.forEach(function (product) {
-      container.innerHTML += `<div class="products">
-                                    <a href="details.html?id=${product.id}">
-                                      <img src="${product.image.url}">
-                                      <h4>${product.title}</h4>
-                                      <p>Price: ${product.price}</p>
+    for (let i = 0; i < json.length; i++) {
+      if (!json[i].featured) {
+        continue;
+      }
+
+      containerFeatured.innerHTML += `<div class="products">
+                                    <a href="details.html?id=${json[i].id}">
+                                      <img src="${productsUrl}/${json[i].image.name}">
+                                      <h4>${json[i].title}</h4>
+                                      <p>Price: ${json[i].price}</p>
                                   </a></div>`;
-    });
+    }
   } catch (error) {
     console.log(error);
-    // displayMessage("error", error, ".product-container");
   }
-})();
+}
+
+getFeatured();
+
+///// HOW TO GET HERO BANNER //////
+
+const heroURL = baseUrl + "home";
+
+const heroContainer = document.querySelector(".hero");
+
+async function getHero() {
+  try {
+    const response = await fetch(heroURL);
+    const json = await response.json();
+
+    console.log(json);
+    console.log(json.id);
+
+    heroContainer.innerHTML += `<img src="${heroURL}/${json.hero_banner.url}">`;
+  } catch (error) {
+    console.log(error);
+  }
+}
+getHero();
