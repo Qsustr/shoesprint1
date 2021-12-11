@@ -8,28 +8,6 @@ const response = await fetch(productsUrl);
 const json = await response.json();
 let productsToRender = json;
 
-//// GETTING ALL PRODUCTS ////
-
-async function getProducts() {
-  try {
-    container.innerHTML = "";
-
-    productsToRender.forEach(function (product) {
-      container.innerHTML += `<div class="products">
-                                    <a href="details.html?id=${product.id}">
-                                      <img src="${product.image.url}">
-                                      <h4>${product.title}</h4>
-                                      <p>Price: ${product.price}</p>
-                                  </a></div>`;
-    });
-  } catch (error) {
-    console.log(error);
-    // displayMessage("error", error, ".product-container");
-  }
-}
-
-getProducts();
-
 ////// FILTER SEARCH ////
 search.onkeyup = function (event) {
   const searchValue = event.target.value.trim().toLowerCase();
@@ -46,3 +24,26 @@ search.onkeyup = function (event) {
 
   getProducts();
 };
+
+//// GETTING ALL PRODUCTS ////
+
+async function getProducts() {
+  try {
+    container.innerHTML = "";
+
+    productsToRender.forEach(function (product) {
+      container.innerHTML += `<div class="products">
+                                    <a href="details.html?id=${product.id}">
+                                      <img src="${product.image.url}">
+                                      <h4>${product.title}</h4>
+                                      <p>Price: ${product.price}</p>
+                                      
+                                  </a></div>`;
+    });
+  } catch (error) {
+    console.log(error);
+    // displayMessage("error", error, ".product-container");
+  }
+}
+
+getProducts();
