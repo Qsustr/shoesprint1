@@ -22,7 +22,7 @@ async function getFeatured() {
 
       containerFeatured.innerHTML += `<div class="products">
                                     <a href="details.html?id=${json[i].id}">
-                                      <img src="${productsUrl}/${json[i].image.name}">
+                                    <img src="${json[i].image.url}">
                                       <h4>${json[i].title}</h4>
                                       <p>Price: ${json[i].price}</p>
                                   </a></div>`;
@@ -48,7 +48,7 @@ async function getHero() {
     console.log(json);
     console.log(json.id);
 
-    heroContainer.innerHTML += `<img src="${heroURL}/${json.hero_banner.url}">`;
+    heroContainer.innerHTML += `<img src="${json.hero_banner.url}">`;
   } catch (error) {
     console.log(error);
   }

@@ -13,6 +13,7 @@ products.forEach((product) => {
   total += product.price;
   container.innerHTML += `<div class="product">
                             <a href="details.html?id=${product.id}">
+                            <img src="${product.image.url}">
                             <h4>${product.id}</h4>
                             <p>${product.price}</p>
                             </a></div>`;

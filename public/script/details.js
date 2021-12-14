@@ -27,6 +27,7 @@ const cartList = document.querySelector(".cart-list");
 const totalContainer = document.querySelector(".total");
 
 productDetails.innerHTML = `<p>${details.id}</p>
+                            <img src="${details.image.url}">
                             <p>${details.title}</p>
                             <p>${details.price}</p>
                             <button class="product-button" data-product = "${details.id}">Add to cart</button>`;
