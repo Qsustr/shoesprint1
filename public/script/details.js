@@ -4,12 +4,16 @@ import { getExistingProducts } from "./utils/productsStorage.js";
 
 import { baseUrl } from "./settings/api.js";
 
+import createMenu from "./components/createMenu.js"; ///needs to be in every js main file
+
 const productsUrl = baseUrl + "products/";
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
 console.log(id);
+
+createMenu(); ///needs to be in every js file
 
 const detailUrl = productsUrl + id;
 

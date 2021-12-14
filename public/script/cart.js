@@ -1,4 +1,7 @@
 import { getExistingProducts } from "./utils/productsStorage.js";
+import createMenu from "./components/createMenu.js"; ///needs to be in every js main file
+
+createMenu(); ///needs to be in every js file
 
 const products = getExistingProducts();
 

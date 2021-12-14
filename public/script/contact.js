@@ -1,3 +1,7 @@
+import createMenu from "./components/createMenu.js"; ///needs to be in every js main file
+
+createMenu(); ///needs to be in every js file
+
 const form = document.querySelector("#contactForm");
 const firstName = document.querySelector("#firstName");
 const firstNameError = document.querySelector("#firstNameError");

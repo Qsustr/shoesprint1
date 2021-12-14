@@ -1,4 +1,7 @@
 import { baseUrl } from "./settings/api.js";
+import createMenu from "./components/createMenu.js"; ///needs to be in every js main file
+
+createMenu(); ///needs to be in every js file
 
 const productsUrl = baseUrl + "products";
 const container = document.querySelector(".products-container");
