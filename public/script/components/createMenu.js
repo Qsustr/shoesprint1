@@ -1,27 +1,33 @@
-import { getUsername } from "./utils/logInStorage.js";
+import { getUsername } from "../utils/logInStorage.js";
+import logoutButton from "./logOutButton.js";
 
 export default function createMenu() {
-  console.log("hey");
-  //   const { pathname } = document.location;
+  const { pathname } = document.location;
 
-  //   const container = document.querySelector(".menu-container");
+  const container = document.querySelector(".menu-container");
 
-  //   const username = getUsername();
+  const username = getUsername();
 
-  //   let authLink = `<a href="login.html" class="${
-  //     pathname === "/login.html" ? "active" : ""
-  //   }">Login</a>`;
+  let authLink = `<a href="login.html" class="${
+    pathname === "/login.html" ? "active" : ""
+  }">Login</a>`;
 
-  //   if (username) {
-  //     authLink = `<span>Hi ${username}</span>`;
-  //   }
+  if (username) {
+    ////a href = add.html should come to add.html, only appears when logged in
+    authLink = `<a href="add.html" class="${
+      pathname === "/add.html" ? "active" : ""
+    }">Add Product</a>
+                <button id="logout">Logout ${username}</button>`; ///style it using #logout in css width: auto;
+  }
 
-  //   console.log(username);
+  console.log(username);
 
-  //   container.innerHTML = `<div class="menu">
-  //                                 <a href="/" class="${
-  //                                   pathname === "/" ? "active" : ""
-  //                                 }">Home</a>
-  //                                 ${authLink}
-  //                         </div>`;
+  container.innerHTML = `<div class="menu">
+  <a href="/" class="${
+    pathname === "/" || pathname === "/index.html" ? "active" : "" /////check this
+  }">Home</a>
+  ${authLink}
+</div>`;
+
+  logoutButton();
 }

@@ -1,8 +1,8 @@
 ///////////details page, getting id
-import { baseUrl } from "./settings/api.js";
 
-const productDetails = document.querySelector(".container");
-const title = document.querySelector("title");
+import { getExistingProducts } from "./utils/productsStorage.js";
+
+import { baseUrl } from "./settings/api.js";
 
 const productsUrl = baseUrl + "products/";
 
@@ -17,36 +17,62 @@ console.log(detailUrl);
 
 // let cartArray = [];
 
-(async function () {
-  try {
-    const response = await fetch(detailUrl);
-    const details = await response.json();
-    console.log(details);
+const response = await fetch(detailUrl);
+const details = await response.json();
+console.log(details);
 
-    const detailsContainer = document.querySelector(".details");
+const productDetails = document.querySelector(".details");
+const cart = document.querySelector(".cart");
+const cartList = document.querySelector(".cart-list");
+const totalContainer = document.querySelector(".total");
 
-    detailsContainer.innerHTML = `<p>${details.id}</p>
-<p>${details.title}</p>`;
-  } catch (error) {
-    console.log("error");
+productDetails.innerHTML = `<p>${details.id}</p>
+                            <p>${details.title}</p>
+                            <p>${details.price}</p>
+                            <button class="product-button" data-product = "${details.id}">Add to cart</button>`;
+
+const favButtons = document.querySelectorAll("button");
+
+favButtons.forEach((button) => {
+  button.addEventListener("click", handleClick);
+});
+
+function handleClick() {
+  const id = details.id;
+  const title = details.title;
+  const price = details.price;
+
+  const currentProducts = getExistingProducts();
+
+  const productExist = currentProducts.find(function (product) {
+    return product.id === id;
+  });
+
+  if (productExist === undefined) {
+    const product = { id: id, title: title, price: price };
+    const detail = details;
+    currentProducts.push(details);
+    saveProducts(currentProducts);
+  } else {
+    const newProduct = currentProducts.filter((product) => product.id !== id);
+    saveProducts(newProduct);
   }
-})();
+}
 
-// function detailsHTML() {
-//   detailsContainer.innerHTML = `<p>${details.id}</p>
-//                                 <p>${details.title}</p>
-//                                 <button class="product-button" data-product = "${details.id}">Add to cart</button>`;
+function saveProducts(favs) {
+  localStorage.setItem("inCart", JSON.stringify(favs));
+}
+
+// //////CART ON DETAILS PAGE
+// function showCart(cartItems) {
+//   cart.style.display = "block"; /////not important, see what looks best, maybe flex
+//   cartList.innerHTML = "";
+//   let total = 0; /////total price
+//   cartItems.forEach(function (cartElement) {
+//     total += cartElement.price;
+//     cartList.innerHTML += `<div class="cart-item">
+//     <h4>${cartElement.title}</h4>
+//     </div>`;
+//   });
+//   totalContainer.innerHTML = `Total: ${total}`;
 // }
-
-// const buttons = document.querySelectorAll("button");
-
-// buttons.forEach(function (button) {
-//   button.onclick = function (event) {
-//     cartArray.push(event.target.dataset.product);
-//     const itemToAdd = detailsHTML.find(
-//       /////here
-//       (item) => item.id === event.target.dataset.product
-//     );
-//     console.log(cartArray);
-//   };
-// });

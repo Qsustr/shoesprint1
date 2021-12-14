@@ -32,8 +32,9 @@ async function getProducts() {
     container.innerHTML = "";
 
     productsToRender.forEach(function (product) {
+      ///change back to details.html?id=${product.id} after
       container.innerHTML += `<div class="products">
-                                    <a href="details.html?id=${product.id}">
+                                    <a href="edit.html?id=${product.id}"> 
                                       <img src="${product.image.url}">
                                       <h4>${product.title}</h4>
                                       <p>Price: ${product.price}</p>

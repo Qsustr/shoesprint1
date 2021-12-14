@@ -1,22 +1,21 @@
-// import { getExistingProducts } from "./utils/cartStorage";
+import { getExistingProducts } from "./utils/productsStorage.js";
 
-// const favourites = getExistingProducts();
+const products = getExistingProducts();
 
-// const productContainer = document.querySelector(".product-container");
+const container = document.querySelector(".product-container");
+const totalContainer = document.querySelector(".total");
+const empty = document.querySelector(".empty-cart");
 
-// if (favourites.length === 0) {
-//   productContainer.innerHTML = "No favourites yet";
-// }
+let total = 0;
 
-// function createList() {
-//   ////only creates html
-//   favourites.forEach((favourite) => {
-//     productContainer.innerHTML += `<div class="product">
-//                                     <h4>${favourite.id}</h4>
-//                                     <p>${favourite.name}
-//                                     <i class="fa fa-heart"></i>
-//                                 </div>`;
-//   });
-// }
+products.forEach((product) => {
+  empty.innerHTML = "";
+  total += product.price;
+  container.innerHTML += `<div class="product">
+                            <a href="details.html?id=${product.id}">
+                            <h4>${product.id}</h4>
+                            <p>${product.price}</p>
+                            </a></div>`;
+});
 
-// createList();
+totalContainer.innerHTML = `Total: ${total}`;

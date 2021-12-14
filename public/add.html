@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Product</title>
+    <link href="css/add.css" rel="stylesheet" />
+    <link rel="icon" href="data:;base64,=" />
+  </head>
+
+  <!-- FORM TO ADD PRODUCT -->
+  <body>
+    <div class="container">
+      <div class="menu-container"></div>
+
+      <h1>Add Product</h1>
+
+      <form>
+        <div class="message-container"></div>
+
+        <div>
+          <label for="title">Title</label>
+          <input id="title" />
+        </div>
+        <div>
+          <label for="description">Description</label>
+          <textarea id="description"></textarea>
+        </div>
+        <div>
+          <label for="price">Price</label>
+          <input id="price" />
+        </div>
+        <div>
+          <label for="image">Image URL</label>
+          <textarea id="image"></textarea>
+        </div>
+        <div>
+          <label for="featured">Featured</label>
+          <input id="featured" />
+        </div>
+        <button>Add</button>
+      </form>
+    </div>
+    <script src="script/add.js" type="module"></script>
+  </body>
+</html>
