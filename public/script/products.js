@@ -1,8 +1,6 @@
 import { baseUrl } from "./settings/api.js";
 import createMenu from "./components/createMenu.js"; ///needs to be in every js main file
 
-createMenu(); ///needs to be in every js file
-
 const productsUrl = baseUrl + "products";
 const container = document.querySelector(".cards");
 const search = document.querySelector(".search");
@@ -10,6 +8,8 @@ const search = document.querySelector(".search");
 const response = await fetch(productsUrl);
 const json = await response.json();
 let productsToRender = json;
+
+createMenu(); ///needs to be in every js file
 
 ////// FILTER SEARCH ////
 search.onkeyup = function (event) {
