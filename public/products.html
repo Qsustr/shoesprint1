@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,53 +13,83 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="css/style.css" />
-    <title>Shop</title>
+    <title>Shoppingsprint | Shop</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light"></nav>
+    <div class="wrapper">
+
+    <nav>
+      <div class="container">
+        <div class="sidemenu">
+          <div class="burger">
+            <label for="hamburger-menu"><i class="fas fa-bars"></i></label>
+            <input type="checkbox" id="hamburger-menu" />
+            <div class="burgermenu">
+              <ul>
+                <li><a href="products.html">Men</a></li>
+                <li><a href="products.html">Women</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+
+        <div class="jsmenu"></div>
+      </div>
+    </nav>
 
     <div class="container">
-      <input class="search" placeholder="Filter..." />
-      <div class="products-container"></div>
+      <div class="sitetitle">
+      <h1>Shop</h1>
+      <input class="search" placeholder="Search by title..." />
+    </div>
+      <div class="products-container">
+        <div class="cards"></div>
+      </div>
+    </div>
 
-      <footer>
-        <div class="firststrip">
-          <div class="icon">
+
+    </div>
+
+    <footer>
+      <div class="container">
+        
+        <div class="firststrip container-flex flex-column">
+        <ul>
+          <li>
             <ion-icon name="cube-outline"></ion-icon>
             <p>Free shipment</p>
-          </div>
-          <div class="icon">
+          </li>
+          <li>
             <ion-icon name="time-outline"></ion-icon>
             <p>60 days return</p>
-          </div>
-          <div class="icon">
+          </li>
+          <li>
             <ion-icon name="home-outline"></ion-icon>
             <p>Home delivery in 3-7 days</p>
-          </div>
-        </div>
+          </li>
+        </ul>
+      </div>
 
         <div class="secondstrip">
-          <h4>We know running shoes!</h4>
+          <p>We know running shoes!</p>
         </div>
 
-        <div class="thirdstrip">
-          <p class="logo">Shoesprint</p>
+        <div class="thirdstrip container-flex flex-column">
+          <a href="index.html" class="nav-brand">Shoesprint</a>
           <div class="sitemap">
-            <ul>
-              <li><a href="products.html">Shop</a></li>
-              <li><a href="cart.html">Shopping cart</a></li>
-              <li><a href="contact.html">Customer service</a></li>
-              <li><a href="login.html">Login</a></li>
-            </ul>
+            <a href="products.html">Shop</a>
+            <a href="cart.html">Shopping cart</a>
+            <a href="contact.html">Customer service</a>
+            <a href="login.html">Login</a>
           </div>
-          <div class="bottomicons">
+          <div class="thirdstrip container-flex flex-column">
             <ion-icon name="logo-facebook"></ion-icon>
             <ion-icon name="logo-instagram"></ion-icon>
           </div>
         </div>
-      </footer>
-    </div>
+    </footer>
 
     <script src="script/products.js" type="module"></script>
 

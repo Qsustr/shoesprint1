@@ -4,7 +4,7 @@ import createMenu from "./components/createMenu.js"; ///needs to be in every js 
 createMenu(); ///needs to be in every js file
 
 const productsUrl = baseUrl + "products";
-const container = document.querySelector(".products-container");
+const container = document.querySelector(".cards");
 const search = document.querySelector(".search");
 
 const response = await fetch(productsUrl);
@@ -38,14 +38,15 @@ async function getProducts() {
       ///change back to details.html?id=${product.id} after
 
       /////change back to <img src="${product.image.url}"> after
-      container.innerHTML += `<div class="products">
+      container.innerHTML += ` <div class="card">
                                     <a href="edit.html?id=${product.id}"> 
                                     <img src="uploads/trendest_studio_XZ_3_Em_AI_Wuz0_unsplash_66b7951ba2.jpg">
-                                      
+                                    <div class ="cardbody">
                                       <h4>${product.title}</h4>
                                       <p>Price: ${product.price}</p>
-                                      
-                                  </a></div>`;
+                                    </div
+                                  </a>
+                                  </div>`;
     });
   } catch (error) {
     console.log(error);

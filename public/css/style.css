@@ -32,7 +32,7 @@ body {
 }
 
 .container {
-  max-width: 90%;
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -60,6 +60,10 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+}
+
+footer {
+  margin-top: 20vh;
 }
 
 nav {
@@ -141,7 +145,6 @@ nav .sidemenu {
   width: 100%;
   height: 110vh;
   text-align: center;
-  font-size: 1.3em;
   z-index: -1;
   line-height: 15vh;
   position: relative;
@@ -152,6 +155,7 @@ nav .sidemenu {
 .burger .fa-bars {
   color: white;
   padding-left: 5vw;
+  font-size: 1.5em;
 }
 
 .burger #hamburger-menu {
@@ -178,12 +182,12 @@ p {
 .nav-brand {
   font-family: "Unica One", cursive;
   text-transform: uppercase;
-  font-size: 1em;
+  font-size: 1.2em;
 }
 
 h1 {
   margin-top: 1.5wm;
-  font-size: 5vw;
+  font-size: 1.6em;
 }
 
 h2 {
@@ -191,12 +195,12 @@ h2 {
 }
 
 p {
-  font-size: 0.9em;
+  font-size: 1em;
   line-height: 1vw;
 }
 
 a {
-  font-size: 0.9em;
+  font-size: 1em;
   text-decoration: none;
   color: black;
 }
@@ -220,6 +224,10 @@ footer {
       flex-shrink: 0;
   width: 100%;
   display: inline-block;
+}
+
+footer ion-icon {
+  font-size: 1.5em;
 }
 
 footer .container {
@@ -260,10 +268,7 @@ footer .firststrip li {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 auto;
           flex: 0 1 auto;
-}
-
-footer .firststrip ion-icon {
-  font-size: 1.3em;
+  padding: 5vh 0vh;
 }
 
 footer .secondstrip {
@@ -281,5 +286,102 @@ footer .thirdstrip {
 
 footer .thirdstrip .sitemap a {
   display: block;
+  padding: 4vh 7vh;
+}
+
+footer .thirdstrip .nav-brand {
+  padding: 5vh 7vh;
+  font-size: 1.4em;
+}
+
+footer .thirdstrip ion-icon {
+  padding: 4vh 7vh;
+}
+
+.hero {
+  position: relative;
+  bottom: 10vh;
+}
+
+.hero .heroimage {
+  position: relative;
+  overflow: hidden;
+  height: 70vh;
+}
+
+.hero .herotext {
+  text-align: center;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.hero .herotext h1 {
+  font-family: "Unica One", cursive;
+  padding-bottom: 5vh;
+}
+
+.hero .herotext ul li {
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 0vw 4vw;
+}
+
+.hero .herotext ul li .line {
+  border: #ffc465 solid 5px;
+}
+
+.product-container {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.featuredtitle {
+  background-color: red;
+  width: 75%;
+  margin: 0 auto;
+}
+
+.cards {
+  width: 75%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-column-gap: 5vh;
+          column-gap: 5vh;
+  row-gap: 5vh;
+}
+
+.card {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 4 47%;
+          flex: 0 4 47%;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.card img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.card .cardbody {
+  text-align: left;
+  background-color: red;
+  padding: 3vw;
+}
+
+.sitetitle {
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */

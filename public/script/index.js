@@ -5,7 +5,7 @@ const productsUrl = baseUrl + "products";
 
 createMenu(); ///needs to be in every js file
 
-const containerFeatured = document.querySelector(".featured");
+const containerFeatured = document.querySelector(".product-container");
 
 //// products cards
 async function getFeatured() {
@@ -22,12 +22,17 @@ async function getFeatured() {
 
       /////img needs to be replaced with <img src="${json[i].image.url}">
 
-      containerFeatured.innerHTML += `<div class="products">
+      containerFeatured.innerHTML += `<div class="cards">
+                                    <div class="card">
                                     <a href="details.html?id=${json[i].id}">
                                     <img src="uploads/photo_1491553895911_0055eca6402d_eaf84a6eb4.jpeg">
+                                    <div class ="cardbody">
                                       <h4>${json[i].title}</h4>
                                       <p>Price: ${json[i].price}</p>
-                                  </a></div>`;
+                                    </div>
+                                  </a>
+                                  </div>
+                                  </div>`;
     }
   } catch (error) {
     console.log(error);
@@ -50,8 +55,19 @@ async function getHero() {
     console.log(json);
     console.log(json.id);
 
+    ///////needs to be replaces with <img src="${json.hero_banner.url}">
     heroContainer.innerHTML += `
-    <img src="uploads/photo_1544085311_11a028465b03_29d7651dcc.jpeg">`; ///////needs to be replaces with <img src="${json.hero_banner.url}">
+    <div class="heroimage">
+    <img src="uploads/photo_1544085311_11a028465b03_29d7651dcc.jpeg">
+    </div>
+    <div class="herotext">
+    <h1>Shop your next running shoes here</h1>
+    <ul>
+    <li><a href="products.html">Men</a></li>
+    <li><span class="line"></li>
+    <li><a href="products.html">Women</a></li>
+    </ul>
+    </div>`;
   } catch (error) {
     console.log(error);
   }

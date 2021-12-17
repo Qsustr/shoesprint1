@@ -39,7 +39,7 @@ export default function createMenu() {
   <div class="sidemenu">
   <a href="./index.html" class="nav-brand${
     pathname === "/" || pathname === "/" ? "active" : "" /////check this
-  }">Shoppingsprint</a>
+  }">Shoesprint</a>
   </div>
 
   <div class="sidemenu">

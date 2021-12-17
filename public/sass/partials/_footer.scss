@@ -3,6 +3,10 @@ footer {
   width: 100%;
   display: inline-block;
 
+  ion-icon {
+    font-size: 1.5em;
+  }
+
   .container {
     max-width: 100%;
     @extend .container-flex;
@@ -29,10 +33,7 @@ footer {
     li {
       display: inline-block;
       flex: 0 1 auto;
-    }
-
-    ion-icon {
-      font-size: 1.3em;
+      padding: 5vh 0vh;
     }
   }
 
@@ -51,7 +52,17 @@ footer {
     .sitemap {
       a {
         display: block;
+        padding: 4vh 7vh;
       }
+    }
+
+    .nav-brand {
+      padding: 5vh 7vh;
+      font-size: 1.4em;
+    }
+
+    ion-icon {
+      padding: 4vh 7vh;
     }
   }
 }
