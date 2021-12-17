@@ -24,5 +24,12 @@ $colours: (
 
 .accent {
   color: getColour(accent);
-  text-decoration: underline;
+  text-decoration: un;
+}
+
+.hide {
+  display: inline-block;
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
 }
