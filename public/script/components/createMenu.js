@@ -27,7 +27,7 @@ export default function createMenu() {
   console.log(username);
 
   container.innerHTML = `
-  <div class="sidemenu">
+  <div class="sidemenu hide">
   <a href="products.html" class="hide${
     pathname === "/" || pathname === "/products.html" ? "active" : "" /////check this
   }">Men</a>
