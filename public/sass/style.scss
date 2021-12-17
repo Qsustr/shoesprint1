@@ -1,37 +1,8 @@
-@import "partials/custom"; ////includes it before bootstrap variables file, then custom overrides
-
-@import "../bootstrap-scss/functions";
-@import "../bootstrap-scss/variables";
-@import "../bootstrap-scss/mixins";
-@import "../bootstrap-scss/root";
-@import "../bootstrap-scss/reboot";
-@import "../bootstrap-scss/type";
-@import "../bootstrap-scss/images";
-@import "../bootstrap-scss/grid";
-@import "../bootstrap-scss/forms";
-@import "../bootstrap-scss/buttons";
-@import "../bootstrap-scss/transitions";
-@import "../bootstrap-scss/dropdown";
-@import "../bootstrap-scss/input-group";
-@import "../bootstrap-scss/custom-forms";
-@import "../bootstrap-scss/nav";
-@import "../bootstrap-scss/navbar";
-@import "../bootstrap-scss/card";
-@import "../bootstrap-scss/badge";
-@import "../bootstrap-scss/jumbotron";
-@import "../bootstrap-scss/media";
-@import "../bootstrap-scss/list-group";
-@import "../bootstrap-scss/close";
-@import "../bootstrap-scss/modal";
-@import "../bootstrap-scss/carousel";
-@import "../bootstrap-scss/spinners";
-@import "../bootstrap-scss/utilities";
-@import "../bootstrap-scss/print";
-
+@import "partials/variables";
+@import "partials/mixins";
 @import "partials/base";
-@import "partials/navbar";
-@import "partials/index"; ////paste after, builds ontop of bootstrap files, not override
+@import "partials/nav";
+@import "partials/forms";
 @import "partials/typography";
-
-///// the rekkefølge betyr noe, eks må variables være på topp slik at alle filer får den
-//the least important to bottom
+@import "partials/buttons";
+@import "partials/footer";

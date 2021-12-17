@@ -1,0 +1,28 @@
+$font-primary: "Roboto light", arial;
+$font-heading-one: "montserrat", sans-serif;
+$font-heading-two: "barlow condensed", sans-serif;
+$font-special: "Unica One", cursive;
+
+$tablet-width: 768px;
+$mobile-width: 400px;
+
+$colours: (
+  primary: white,
+  ////
+  secondary: #444a4d,
+  ///navbar $ footer
+  accent: #97fff3,
+  ////border nav
+  grey: #efefef,
+  blue: #3f4258,
+  ///buttons
+);
+
+@function getColour($colour) {
+  @return map-get($colours, $colour);
+}
+
+.accent {
+  color: getColour(accent);
+  text-decoration: underline;
+}

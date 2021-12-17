@@ -20,9 +20,11 @@ async function getFeatured() {
         continue;
       }
 
+      /////img needs to be replaced with <img src="${json[i].image.url}">
+
       containerFeatured.innerHTML += `<div class="products">
                                     <a href="details.html?id=${json[i].id}">
-                                    <img src="${json[i].image.url}">
+                                    <img src="uploads/photo_1491553895911_0055eca6402d_eaf84a6eb4.jpeg">
                                       <h4>${json[i].title}</h4>
                                       <p>Price: ${json[i].price}</p>
                                   </a></div>`;
@@ -48,7 +50,8 @@ async function getHero() {
     console.log(json);
     console.log(json.id);
 
-    heroContainer.innerHTML += `<img src="${json.hero_banner.url}">`;
+    heroContainer.innerHTML += `
+    <img src="uploads/photo_1544085311_11a028465b03_29d7651dcc.jpeg">`; ///////needs to be replaces with <img src="${json.hero_banner.url}">
   } catch (error) {
     console.log(error);
   }

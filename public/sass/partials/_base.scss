@@ -1,3 +1,24 @@
+* {
+  box-sizing: border-box;
+  // overflow: hidden; ///use this on images
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  font-family: $font-primary;
+}
+
+.wrapper {
+  flex: 1 0 auto;
+}
+
 .container {
   max-width: 90%;
   margin: 0 auto;
