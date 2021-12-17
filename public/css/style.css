@@ -1,6 +1,13 @@
 .accent {
   color: #97fff3;
-  text-decoration: underline;
+  -webkit-text-decoration: un;
+          text-decoration: un;
+}
+
+@media (max-width: 768px) {
+  .hide {
+    display: none;
+  }
 }
 
 * {

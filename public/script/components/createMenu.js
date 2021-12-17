@@ -27,13 +27,15 @@ export default function createMenu() {
   console.log(username);
 
   container.innerHTML = `
-  <div class="sidemenu hide">
-  <a href="products.html" class="hide${
+  <div class="sidemenu">
+  <div class="hide">
+  <a href="products.html" class="${
     pathname === "/" || pathname === "/products.html" ? "active" : "" /////check this
   }">Men</a>
-  <a href="products.html" class="hide${
+  <a href="products.html" class="${
     pathname === "/" || pathname === "/products.html" ? "active" : "" /////check this
   }">Women</a>
+  </div>
   </div>
 
   <div class="sidemenu">

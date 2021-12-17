@@ -28,7 +28,6 @@ $colours: (
 }
 
 .hide {
-  display: inline-block;
   @media (max-width: $tablet-width) {
     display: none;
   }
