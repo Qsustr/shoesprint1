@@ -13,6 +13,7 @@ p {
 .nav-brand {
   font-family: $font-special;
   text-transform: uppercase;
+  font-size: 1em;
 }
 
 ///////
@@ -34,10 +35,21 @@ p {
 a {
   font-size: 0.9em;
   text-decoration: none;
+  color: black;
 }
 
 //////
 
 ul {
   list-style: none;
+  margin: none;
+  padding: 0;
+}
+
+li {
+  margin: none;
+}
+
+ion-icon {
+  font-size: 1.2em;
 }

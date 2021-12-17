@@ -1,5 +1,57 @@
 footer {
+  flex-shrink: 0;
+  width: 100%;
+  display: inline-block;
+
   .container {
-    flex-direction: row;
+    max-width: 100%;
+    @extend .container-flex;
+    @extend .flex-column;
+  }
+
+  .firststrip {
+    width: 100%;
+    background-color: getColour(grey);
+    padding: 1.3em;
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      width: 70%;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      @media (max-width: $tablet-width) {
+        flex-direction: column;
+        line-height: 8vh;
+      }
+    }
+    li {
+      display: inline-block;
+      flex: 0 1 auto;
+    }
+
+    ion-icon {
+      font-size: 1.3em;
+    }
+  }
+
+  .secondstrip {
+    width: 100%;
+    background-color: getColour(secondary);
+    border-bottom: 0.1vw solid getColour(accent); /////same colors as nav, import
+    color: white;
+    text-align: center;
+    padding: 1.3em;
+  }
+
+  .thirdstrip {
+    text-align: center;
+
+    .sitemap {
+      a {
+        display: block;
+      }
+    }
   }
 }

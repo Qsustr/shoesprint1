@@ -9,7 +9,7 @@ export default function createMenu() {
   const username = getUsername();
 
   let authLink = `
-  <a href="login.html" class="navicon${
+  <a href="login.html" class="${
     pathname === "/login.html" ? "active" : ""
   }"><ion-icon name="person-outline"></ion-icon></a>`;
 
@@ -44,7 +44,7 @@ export default function createMenu() {
 
   <div class="sidemenu">
   ${authLink}  
-<a href="./cart.html" class="navicon${
+<a href="./cart.html" class="${
     pathname === "/" || pathname === "/" ? "active" : "" /////check this
   }"><ion-icon name="cart-outline"></ion-icon></a>
   </div>`;
@@ -62,7 +62,7 @@ function createMenuMobile() {
   const username = getUsername();
 
   let authLink = `
-  <a href="login.html" class="navicon${
+  <a href="login.html" class="${
     pathname === "/login.html" ? "active" : ""
   }"><ion-icon name="person-outline"></ion-icon></a>`;
 
