@@ -1,1 +1,13 @@
-//// create nav and footer box colors
+@mixin containerflex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  align-items: stretch;
+}
+
+@mixin footernavcolor {
+  background-color: getColour(secondary);
+  border-bottom: 0.1vw solid getColour(accent);
+}

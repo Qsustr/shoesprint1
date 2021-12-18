@@ -1,0 +1,26 @@
+.details {
+  margin-top: 5vh;
+  .container-flex {
+    @include containerflex;
+    column-gap: 20vh;
+    row-gap: 20vh;
+
+    @media (max-width: $tabletPRO-width) {
+      column-gap: 5vh;
+      row-gap: 5vh;
+    }
+    @media (max-width: $tablet-width) {
+      flex-direction: column;
+      column-gap: 5vh;
+      row-gap: 5vh;
+    }
+    .item {
+      flex: 1;
+
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}

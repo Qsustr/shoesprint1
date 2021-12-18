@@ -39,8 +39,7 @@ footer {
 
   .secondstrip {
     width: 100%;
-    background-color: getColour(secondary);
-    border-bottom: 0.1vw solid getColour(accent); /////same colors as nav, import
+    @include footernavcolor;
     color: white;
     text-align: center;
     padding: 1.3em;

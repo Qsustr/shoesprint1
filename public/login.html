@@ -16,82 +16,92 @@
     />
 
     <link rel="stylesheet" href="css/style.css" />
-    <title>Login</title>
+    <title>Shoppingsprint | Login</title>
   </head>
   <body>
-    <nav>
-      <div class="container">
-        <div class="sidemenu">
-          <div class="burger">
-            <label for="hamburger-menu"><i class="fas fa-bars"></i></label>
-            <input type="checkbox" id="hamburger-menu" />
-            <div class="burgermenu">
-              <ul>
-                <li><a href="products.html">Men</a></li>
-                <li><a href="products.html">Women</a></li>
-                <li><a href="contact.html">Contact</a></li>
-              </ul>
+  <div class="wrapper">
+      <nav>
+        <div class="container">
+          <div class="sidemenu">
+            <div class="burger">
+              <label for="hamburger-menu"><i class="fas fa-bars"></i></label>
+              <input type="checkbox" id="hamburger-menu" />
+              <div class="burgermenu">
+                <ul>
+                  <li><a href="products.html">Men</a></li>
+                  <li><a href="products.html">Women</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                </ul>
+              </div>
             </div>
+          <div class="jsmenu"></div>
+        </div>
+      </nav>
+
+
+      <div class="container form">
+        <div class="container-flex">
+        <div class="item">
+          <h1>Login</h1>
+          <p>Only for admins.</p>
+       </div>
+
+
+      <div class="item formfields">
+        <form>
+          <div class="message-container"></div>
+
+          <div>
+            <label for="username">Username/email</label>
+            <input id="username" />
+           </div>
+          <div>
+            <label for="password">Password</label>
+            <input id="password" type="password" />
           </div>
 
-        <div class="jsmenu"></div>
-      </div>
-    </nav>
-    <div class="container">
-      <h1>Login</h1>
-
-      <form>
-        <div class="message-container"></div>
-
-        <div>
-          <label for="username">Username/email</label>
-          <input id="username" />
-        </div>
-        <div>
-          <label for="password">Password</label>
-          <input id="password" type="password" />
-        </div>
-
-        <button>Submit</button>
+            <button>Submit</button>
       </form>
+    </div>
+</div>
+</div>
 
       <footer>
-        <div class="firststrip">
-          <div class="icon">
-            <ion-icon name="cube-outline"></ion-icon>
-            <p>Free shipment</p>
-          </div>
-          <div class="icon">
-            <ion-icon name="time-outline"></ion-icon>
-            <p>60 days return</p>
-          </div>
-          <div class="icon">
-            <ion-icon name="home-outline"></ion-icon>
-            <p>Home delivery in 3-7 days</p>
-          </div>
+        <div class="container">
+          
+          <div class="firststrip container-flex flex-column">
+          <ul>
+            <li>
+              <ion-icon name="cube-outline"></ion-icon>
+              <p>Free shipment</p>
+            </li>
+            <li>
+              <ion-icon name="time-outline"></ion-icon>
+              <p>60 days return</p>
+            </li>
+            <li>
+              <ion-icon name="home-outline"></ion-icon>
+              <p>Home delivery in 3-7 days</p>
+            </li>
+          </ul>
         </div>
-
-        <div class="secondstrip">
-          <h4>We know running shoes!</h4>
-        </div>
-
-        <div class="thirdstrip">
-          <p class="logo">Shoesprint</p>
-          <div class="sitemap">
-            <ul>
-              <li><a href="products.html">Shop</a></li>
-              <li><a href="cart.html">Shopping cart</a></li>
-              <li><a href="contact.html">Customer service</a></li>
-              <li><a href="login.html">Login</a></li>
-            </ul>
+          <div class="secondstrip">
+            <p>We know running shoes!</p>
+          </div>  
+          <div class="thirdstrip container-flex flex-column">
+            <a href="index.html" class="nav-brand">Shoesprint</a>
+            <div class="sitemap">
+              <a href="products.html">Shop</a>
+              <a href="cart.html">Shopping cart</a>
+              <a href="contact.html">Customer service</a>
+              <a href="login.html">Login</a>
+            </div>
+            <div class="thirdstrip container-flex flex-column">
+              <ion-icon name="logo-facebook"></ion-icon>
+              <ion-icon name="logo-instagram"></ion-icon>
+            </div>
           </div>
-          <div class="bottomicons">
-            <ion-icon name="logo-facebook"></ion-icon>
-            <ion-icon name="logo-instagram"></ion-icon>
-          </div>
-        </div>
       </footer>
-    </div>
 
     <script src="script/login.js" type="module"></script>
 

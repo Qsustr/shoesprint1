@@ -74,9 +74,9 @@ footer {
 }
 
 nav {
-  display: inline-block;
   background-color: #444a4d;
   border-bottom: 0.1vw solid #97fff3;
+  display: inline-block;
   width: 100%;
   z-index: 3;
   position: relative;
@@ -174,6 +174,95 @@ nav .sidemenu {
   display: inline-block;
 }
 
+.message {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid grey;
+  color: grey;
+}
+
+.message.error {
+  border-color: red;
+  color: white;
+  background: red;
+}
+
+.message.warning {
+  border-color: orange;
+  color: white;
+  background: orange;
+}
+
+.message.success {
+  border-color: green;
+  color: white;
+  background: green;
+}
+
+.form {
+  margin-left: 20vh;
+}
+
+.form .container-flex, .form footer .container, footer .form .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-column-gap: 10vh;
+          column-gap: 10vh;
+  row-gap: 20vh;
+  width: 90%;
+}
+
+.form .container-flex .item, .form footer .container .item, footer .form .container .item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.form .container-flex .formfields, .form footer .container .formfields, footer .form .container .formfields {
+  background-color: #383838;
+  color: white;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  padding: 5vw 10vw;
+  line-height: 6vh;
+}
+
+.form .container-flex .formfields div, .form footer .container .formfields div, footer .form .container .formfields div {
+  margin-bottom: 3vw;
+}
+
+.form .container-flex .formfields input, .form footer .container .formfields input, footer .form .container .formfields input {
+  display: block;
+  width: 100%;
+  padding: 0.5vw;
+}
+
+.form .container-flex .formfields textarea, .form footer .container .formfields textarea, footer .form .container .formfields textarea {
+  display: block;
+  width: 100%;
+  height: 20vh;
+}
+
+.form .container-flex .formfields .form-error, .form footer .container .formfields .form-error, footer .form .container .formfields .form-error {
+  display: none;
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 2px;
+}
+
 h1 {
   font-family: "montserrat", sans-serif;
 }
@@ -203,7 +292,7 @@ h2 {
 
 p {
   font-size: 1em;
-  line-height: 1vw;
+  line-height: 3.7vh;
 }
 
 a {
@@ -349,20 +438,23 @@ footer .thirdstrip ion-icon {
 }
 
 .cards {
-  width: 75%;
-  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 75%;
   -webkit-column-gap: 5vh;
           column-gap: 5vh;
   row-gap: 5vh;
@@ -390,5 +482,61 @@ footer .thirdstrip ion-icon {
 
 .sitetitle {
   text-align: center;
+}
+
+.details {
+  margin-top: 5vh;
+}
+
+.details .container-flex, .details footer .container, footer .details .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-column-gap: 20vh;
+          column-gap: 20vh;
+  row-gap: 20vh;
+}
+
+@media (max-width: 1030px) {
+  .details .container-flex, .details footer .container, footer .details .container {
+    -webkit-column-gap: 5vh;
+            column-gap: 5vh;
+    row-gap: 5vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .details .container-flex, .details footer .container, footer .details .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-column-gap: 5vh;
+            column-gap: 5vh;
+    row-gap: 5vh;
+  }
+}
+
+.details .container-flex .item, .details footer .container .item, footer .details .container .item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.details .container-flex .item img, .details footer .container .item img, footer .details .container .item img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 /*# sourceMappingURL=style.css.map */

@@ -2,10 +2,12 @@
 @import "partials/mixins";
 @import "partials/base";
 @import "partials/nav";
+@import "partials/displaymessage";
 @import "partials/forms";
 @import "partials/typography";
 @import "partials/buttons";
 @import "partials/footer";
 
 @import "partials/index";
-@import "partials/featured";
+@import "partials/products"; ////export to details
+@import "partials/details";

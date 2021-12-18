@@ -1,7 +1,6 @@
 nav {
+  @include footernavcolor;
   display: inline-block;
-  background-color: getColour(secondary);
-  border-bottom: 0.1vw solid getColour(accent);
   width: 100%;
   z-index: 3;
   position: relative;
@@ -24,7 +23,6 @@ nav {
   }
 
   .sidemenu {
-    //////import this instead
     margin: 0 auto;
     display: flex;
     justify-content: space-between;

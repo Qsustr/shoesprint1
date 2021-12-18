@@ -32,3 +32,48 @@
 //         display: block;
 //     }
 // }
+
+.form {
+  margin-left: 20vh;
+  .container-flex {
+    @include containerflex;
+    column-gap: 10vh;
+    row-gap: 20vh;
+    width: 90%;
+
+    .item {
+      flex: 1;
+    }
+
+    .formfields {
+      background-color: #383838;
+      color: white;
+      flex: 2;
+      padding: 5vw 10vw;
+      line-height: 6vh;
+
+      div {
+        margin-bottom: 3vw;
+      }
+
+      input {
+        display: block;
+        width: 100%;
+        padding: 0.5vw;
+      }
+
+      textarea {
+        display: block;
+        width: 100%;
+        height: 20vh;
+      }
+
+      .form-error {
+        display: none;
+        color: red;
+        font-size: 0.9rem;
+        margin-top: 2px;
+      }
+    }
+  }
+}

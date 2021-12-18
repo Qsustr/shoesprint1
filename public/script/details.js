@@ -25,20 +25,28 @@ const response = await fetch(detailUrl);
 const details = await response.json();
 console.log(details);
 
-const productDetails = document.querySelector(".details");
-const cart = document.querySelector(".cart");
-const cartList = document.querySelector(".cart-list");
-const totalContainer = document.querySelector(".total");
+const productDetails = document.querySelector(".container-flex");
+
+// const cart = document.querySelector(".cart");
+// const cartList = document.querySelector(".cart-list");
+// const totalContainer = document.querySelector(".total");
 
 /////endre img til <img src="${details.image.url}"> igjen
 
-productDetails.innerHTML = `<p>${details.id}</p>
+productDetails.innerHTML = `<div class="item">
                             <img src="uploads/photo_1491553895911_0055eca6402d_eaf84a6eb4.jpeg">
-                            <p>${details.title}</p>
+                            </div>
+                            
+                            <div class="item">
+                            <h1>${details.title}</h1>
                             <p>${details.price}</p>
-                            <button class="product-button" data-product = "${details.id}">Add to cart</button>`;
+                            <p>${details.description}</p>
+                            <button class="product-button" data-product = "${details.id}">Add to cart</button>
+                            </div>`;
 
 const favButtons = document.querySelectorAll("button");
+
+// detailsImg.innerHTML = `<img src="uploads/photo_1491553895911_0055eca6402d_eaf84a6eb4.jpeg">`;
 
 favButtons.forEach((button) => {
   button.addEventListener("click", handleClick);

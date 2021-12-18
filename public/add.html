@@ -21,74 +21,118 @@
 
   <!-- FORM TO ADD PRODUCT -->
   <body>
-    <div class="container">
-      <div class="menu-container"></div>
+    <div class="wrapper">
+      <nav>
+        <div class="container">
+          <div class="sidemenu">
+            <div class="burger">
+              <label for="hamburger-menu"><i class="fas fa-bars"></i></label>
+              <input type="checkbox" id="hamburger-menu" />
+              <div class="burgermenu">
+                <ul>
+                  <li><a href="products.html">Men</a></li>
+                  <li><a href="products.html">Women</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+          <div class="jsmenu"></div>
+        </div>
+      </nav>
 
-      <h1>Add Product</h1>
+      <div class="container form">
+        <div class="container-flex">
+          <div class="item">
+             <h1>Add Product</h1>
+          </div>
 
-      <form>
-        <div class="message-container"></div>
+        <div class="item formfields">  
+        <form>
+          <div class="message-container"></div>
 
-        <div>
-          <label for="title">Title</label>
-          <input id="title" />
-        </div>
-        <div>
-          <label for="description">Description</label>
-          <textarea id="description"></textarea>
-        </div>
-        <div>
-          <label for="price">Price</label>
-          <input id="price" />
-        </div>
-        <div>
-          <label for="image">Image URL</label>
-          <textarea id="image"></textarea>
-        </div>
-        <div>
-          <label for="featured">Featured</label>
-          <input id="featured" />
-        </div>
-        <button>Add</button>
-      </form>
+          <div>
+            <label for="title">Title</label>
+            <input id="title" />
+            <div class="form-error" id="titleError">
+              Please enter a value
+            </div>
+          </div>
 
-      <footer>
-        <div class="firststrip">
-          <div class="icon">
+          <div>
+            <label for="description">Description</label>
+            <textarea id="description"></textarea>
+            <div class="form-error" id="descriptionError">
+              Please enter a value
+            </div>
+          </div>
+
+
+          <div>
+            <label for="price">Price</label>
+            <input id="price" />
+            <div class="form-error" id="PriceError">
+              Please enter a number for price
+            </div>
+          </div>
+
+          <div>
+            <label for="image">Image URL</label>
+            <textarea id="image"></textarea>
+            <div class="form-error" id="imgError">
+              Please enter a value for image url
+            </div>
+          </div>
+
+          <div>
+            <label for="featured">Featured</label>
+            <input id="featured" />
+            <div class="form-error" id="featuredError">
+              Please enter a bolean (true/false) value
+            </div>
+          </div>
+
+          <button>Add</button>
+        </form>
+      </div>
+    </div>
+  </div>  
+
+    <footer>
+      <div class="container">
+        <div class="firststrip container-flex flex-column">
+        <ul>
+          <li>
             <ion-icon name="cube-outline"></ion-icon>
             <p>Free shipment</p>
-          </div>
-          <div class="icon">
+          </li>
+          <li>
             <ion-icon name="time-outline"></ion-icon>
             <p>60 days return</p>
-          </div>
-          <div class="icon">
+          </li>
+          <li>
             <ion-icon name="home-outline"></ion-icon>
             <p>Home delivery in 3-7 days</p>
-          </div>
-        </div>
-
+          </li>
+        </ul>
+      </div>
         <div class="secondstrip">
-          <h4>We know running shoes!</h4>
+          <p>We know running shoes!</p>
         </div>
-
-        <div class="thirdstrip">
-          <p class="logo">Shoesprint</p>
+        <div class="thirdstrip container-flex flex-column">
+          <a href="index.html" class="nav-brand">Shoesprint</a>
           <div class="sitemap">
-            <ul>
-              <li><a href="products.html">Shop</a></li>
-              <li><a href="cart.html">Shopping cart</a></li>
-              <li><a href="contact.html">Customer service</a></li>
-              <li><a href="login.html">Login</a></li>
-            </ul>
+            <a href="products.html">Shop</a>
+            <a href="cart.html">Shopping cart</a>
+            <a href="contact.html">Customer service</a>
+            <a href="login.html">Login</a>
           </div>
-          <div class="bottomicons">
+          <div class="thirdstrip container-flex flex-column">
             <ion-icon name="logo-facebook"></ion-icon>
             <ion-icon name="logo-instagram"></ion-icon>
           </div>
         </div>
-      </footer>
-    </div>
+    </footer>
+
     <script src="script/add.js" type="module"></script>
 
     <script

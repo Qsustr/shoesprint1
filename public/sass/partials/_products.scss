@@ -10,13 +10,9 @@
 }
 
 .cards {
-  width: 75%;
-  margin: 0 auto;
-  display: flex;
+  @include containerflex;
   flex-wrap: wrap;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  width: 75%;
   column-gap: 5vh;
   row-gap: 5vh;
   //   flex-direction: column; ///breakpoint
