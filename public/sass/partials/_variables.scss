@@ -9,14 +9,10 @@ $mobile-width: 400px;
 
 $colours: (
   primary: white,
-  ////
   secondary: #444a4d,
-  ///navbar $ footer
   accent: #97fff3,
-  ////border nav
   grey: #efefef,
   blue: #3f4258,
-  ///buttons
 );
 
 @function getColour($colour) {

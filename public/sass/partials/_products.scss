@@ -28,19 +28,12 @@
   @media (max-width: $tablet-width) {
     padding: 2vw;
   }
-  //   flex-direction: column; ///breakpoint
 }
 
 .card {
-  overflow: hidden;
   flex: 0 4 30%;
   width: 100%;
   margin: 0 auto;
-
-  // @media (max-width: $tablet-width) {
-  //   flex: 0 4 30%;
-  // }
-
   @media (max-width: $mobile-width) {
     flex: 0 1 60%;
   }

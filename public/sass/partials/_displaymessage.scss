@@ -2,25 +2,20 @@
   width: 100%;
   padding: 0.4em;
   border: 1px solid grey;
-  color: grey;
+  color: rgb(255, 255, 255);
 
   &.error {
     border-color: red;
-    color: white;
     background: red;
   }
 
   &.warning {
     border-color: orange;
-    color: white;
     background: orange;
   }
 
   &.success {
     border-color: green;
-    color: white;
     background: green;
   }
 }
-
-///// edit this

@@ -1,42 +1,3 @@
-// .buttons {
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-
-//     @media (min-width: $tablet-width) {
-//         flex-direction: row;
-//         justify-content: space-between;
-//     }
-// }
-
-// .btn {
-//     color: white;
-//     font-size: 1.4rem;
-
-//     &.squared {
-//         background: getColour(accent);
-//         width: 300px;
-//         height: 200px;
-//         margin-bottom: 1em;
-//         @include button-border(0);
-//     }
-
-//     &.rounded {
-//         background: getColour(secondary);
-//         width: 300px;
-//         height: 200px;
-//         margin-bottom: 1em;
-//         @include button-border(15px);
-//     }
-
-//     &.circle {
-//         background: getColour(accent);
-//         width: 200px;
-//         height: 200px;
-//         @include button-border(100%);
-//     }
-// }
-
 button {
   padding: 0;
   border: none;
@@ -47,7 +8,6 @@ button {
 }
 
 #logout {
-  ///this is the admin log out in navbar
   color: white;
   border: 0.1vw solid white;
   padding: 0.5vw;
@@ -64,12 +24,10 @@ button {
 }
 
 .product-button {
-  //this is only details button
   @include custombutton;
 }
 
 .cartbutton {
-  //this is only for cart button
   @include custombutton;
 }
 
