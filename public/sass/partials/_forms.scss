@@ -1,40 +1,6 @@
-// ::placeholder {
-//     color: white;
-// }
-
-// .form-common {
-//     border: none;
-//     height: 25px;
-//     padding: 0.2rem 0.3em;
-//     color: white;
-// }
-
-// .form-search {
-//     display: none;
-
-//     input {
-//         @extend .form-common;
-//         background: darken(getColour(primary), 10%);
-//     }
-
-//     button {
-//         @extend .form-common;
-//         background: getColour(secondary);
-//         width: 35px;
-
-//         &:hover {
-//             background: lighten(getColour(secondary), 10);
-//             cursor: pointer;
-//         }
-//     }
-
-//     @media (min-width: $tablet-width) {
-//         display: block;
-//     }
-// }
-
 .form {
   margin-left: 20vh;
+  margin-bottom: 15vh;
   @media (max-width: $tablet-width) {
     margin-left: 0vh;
   }

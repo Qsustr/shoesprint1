@@ -20,7 +20,7 @@ products.forEach((product) => {
                           <a href="details.html?id=${product.id}">
                           <div class="container-flex">
                             <div class="item padding">
-                              <img src="uploads/trendest_studio_XZ_3_Em_AI_Wuz0_unsplash_66b7951ba2.jpg">
+                            <img src="${product.image.url}">
                             </div>
                             <div class="item">
                             <h2>${product.title}</h2>

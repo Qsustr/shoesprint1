@@ -149,7 +149,7 @@ nav .sidemenu {
   height: 110vh;
   text-align: center;
   z-index: -1;
-  line-height: 15vh;
+  line-height: 17vw;
   position: relative;
   top: 5vw;
   left: 0vw;
@@ -265,7 +265,8 @@ nav .sidemenu {
 }
 
 .imagecards {
-  margin-bottom: 20vw;
+  margin-bottom: 15vw;
+  margin-top: 20vw;
   text-align: center;
 }
 
@@ -277,6 +278,12 @@ nav .sidemenu {
 .imagecards .cardimg {
   width: 75%;
   margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .imagecards .cardimg {
+    width: 90%;
+  }
 }
 
 .imagecards .cardimg img {
@@ -301,6 +308,7 @@ nav .sidemenu {
 
 .form {
   margin-left: 20vh;
+  margin-bottom: 15vh;
 }
 
 @media (max-width: 768px) {
@@ -628,7 +636,7 @@ footer .firststrip ul {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    line-height: 8vh;
+    line-height: 15vw;
   }
 }
 
@@ -637,7 +645,7 @@ footer .firststrip li {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 auto;
           flex: 0 1 auto;
-  padding: 5vh 0vh;
+  padding: 7vw 0vw;
 }
 
 footer .secondstrip {
@@ -655,7 +663,7 @@ footer .thirdstrip {
 
 footer .thirdstrip .sitemap a {
   display: block;
-  padding: 4vh 20vh;
+  padding: 6vh 10vh;
 }
 
 footer .thirdstrip .sitemap a:hover {
@@ -733,6 +741,12 @@ footer .thirdstrip ion-icon:focus {
   padding: 0.1vw;
   letter-spacing: 0.1vw;
   text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .featuredtitle {
+    width: 90%;
+  }
 }
 
 .cards {

@@ -40,7 +40,7 @@ async function getProducts() {
       /////change back to <img src="${product.image.url}"> after
       container.innerHTML += ` <div class="card">
                                     <a href="edit.html?id=${product.id}"> 
-                                    <img src="uploads/trendest_studio_XZ_3_Em_AI_Wuz0_unsplash_66b7951ba2.jpg">
+                                    <img src="${product.image.url}">
                                     <div class ="cardbody">
                                       <h4>${product.title}</h4>
                                       <p>${product.price} $</p>

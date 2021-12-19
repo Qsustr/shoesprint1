@@ -27,7 +27,7 @@ async function getFeatured() {
       containerFeatured.innerHTML += `
                                     <div class="card">
                                     <a href="details.html?id=${json[i].id}">
-                                    <img src="uploads/photo_1491553895911_0055eca6402d_eaf84a6eb4.jpeg">
+                                    <img src="${json[i].image.url}">
                                     <div class ="cardbody">
                                       <h4>${json[i].title}</h4>
                                       <p>${json[i].price} $</p>

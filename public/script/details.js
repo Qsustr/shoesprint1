@@ -35,7 +35,7 @@ const breadcrumb = document.querySelector(".breadcrumb ul");
 /////endre img til <img src="${details.image.url}"> igjen
 
 productDetails.innerHTML = `<div class="item">
-                            <img src="uploads/photo_1491553895911_0055eca6402d_eaf84a6eb4.jpeg">
+                            <img src="${details.image.url}"> 
                             </div>
                             
                             <div class="item">
