@@ -33,7 +33,7 @@ products.forEach((product) => {
                               <div class="box">1</div>
                               <ion-icon name="remove-circle-outline"></ion-icon>
                             </div>
-                            <h3>${product.price}$</h3>
+                            <span class="price">${product.price}$</h3>
                             
                           </div>
                             </div>

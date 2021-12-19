@@ -51,7 +51,8 @@ footer {
     .sitemap {
       a {
         display: block;
-        padding: 4vh 7vh;
+        padding: 4vh 20vh;
+        @include darkhover;
       }
     }
 
@@ -61,7 +62,9 @@ footer {
     }
 
     ion-icon {
-      padding: 4vh 7vh;
+      padding: 4vh 20vh;
+
+      @include darkhover;
     }
   }
 }

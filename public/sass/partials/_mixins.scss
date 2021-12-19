@@ -42,3 +42,15 @@
     }
   }
 }
+
+@mixin darkhover {
+  &:hover {
+    color: white;
+    background-color: getColour(secondary);
+  }
+
+  &:focus {
+    color: white;
+    background-color: getColour(secondary);
+  }
+}

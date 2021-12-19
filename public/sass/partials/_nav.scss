@@ -68,6 +68,18 @@ nav {
     position: relative;
     top: 5vw;
     left: 0vw;
+
+    @media (max-width: $mobile-width) {
+      line-height: 20vh;
+    }
+
+    a {
+      padding: 3vh 20vh;
+      &:focus {
+        background-color: white;
+        color: black;
+      }
+    }
   }
 
   .fa-bars {
@@ -85,3 +97,10 @@ nav {
     display: inline-block;
   }
 }
+
+// a {
+//   padding: 3vw 100vw;
+//   &:focus {
+//     background-color: yellow;
+//   }
+// }

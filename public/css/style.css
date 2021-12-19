@@ -1,7 +1,5 @@
 .accent {
   color: #97fff3;
-  -webkit-text-decoration: un;
-          text-decoration: un;
 }
 
 @media (max-width: 768px) {
@@ -159,6 +157,21 @@ nav .sidemenu {
   left: 0vw;
 }
 
+@media (max-width: 400px) {
+  .burger .burgermenu {
+    line-height: 20vh;
+  }
+}
+
+.burger .burgermenu a {
+  padding: 3vh 20vh;
+}
+
+.burger .burgermenu a:focus {
+  background-color: white;
+  color: black;
+}
+
 .burger .fa-bars {
   color: white;
   padding-left: 5vw;
@@ -197,6 +210,33 @@ nav .sidemenu {
   border-color: green;
   color: white;
   background: green;
+}
+
+.sitetitle {
+  margin-top: 7vh;
+  margin-bottom: 3vh;
+}
+
+.sitetitleforms {
+  text-align: left;
+  margin-top: 10vh;
+  margin-bottom: 3vh;
+}
+
+@media (max-width: 768px) {
+  .sitetitleforms {
+    margin-top: 7vh;
+  }
+}
+
+.accent {
+  color: #97fff3;
+}
+
+@media (max-width: 768px) {
+  .hide {
+    display: none;
+  }
 }
 
 .form {
@@ -287,9 +327,11 @@ nav .sidemenu {
 
 .form .container-flex .formfields .form-error, .form footer .container .formfields .form-error, footer .form .container .formfields .form-error {
   display: none;
-  color: red;
+  color: #dedede;
+  background-color: black;
+  font-size: 0.7em;
   font-size: 0.9rem;
-  margin-top: 2px;
+  margin-top: 3px;
 }
 
 h1 {
@@ -553,7 +595,17 @@ footer .thirdstrip {
 
 footer .thirdstrip .sitemap a {
   display: block;
-  padding: 4vh 7vh;
+  padding: 4vh 20vh;
+}
+
+footer .thirdstrip .sitemap a:hover {
+  color: white;
+  background-color: #444a4d;
+}
+
+footer .thirdstrip .sitemap a:focus {
+  color: white;
+  background-color: #444a4d;
 }
 
 footer .thirdstrip .nav-brand {
@@ -562,7 +614,17 @@ footer .thirdstrip .nav-brand {
 }
 
 footer .thirdstrip ion-icon {
-  padding: 4vh 7vh;
+  padding: 4vh 20vh;
+}
+
+footer .thirdstrip ion-icon:hover {
+  color: white;
+  background-color: #444a4d;
+}
+
+footer .thirdstrip ion-icon:focus {
+  color: white;
+  background-color: #444a4d;
 }
 
 .hero {
@@ -655,6 +717,26 @@ footer .thirdstrip ion-icon {
   text-align: center;
 }
 
+.sitetitle input {
+  width: 47%;
+  padding: 1vw;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .sitetitle input {
+    width: 70%;
+    padding: 2vw;
+  }
+}
+
+@media (max-width: 400px) {
+  .sitetitle input {
+    width: 70%;
+    padding: 3vw;
+  }
+}
+
 .details {
   margin-top: 5vh;
 }
@@ -727,9 +809,8 @@ footer .thirdstrip ion-icon {
   margin-bottom: 10vh;
 }
 
-button {
-  margin: auto;
-  display: block;
+.empty-cart {
+  text-align: center;
 }
 
 .products-container {
@@ -739,8 +820,18 @@ button {
 }
 
 .products-container .total {
+  position: relative;
+  top: 5vw;
+  font-weight: bold;
+  font-size: 1.4em;
+  font-family: "barlow condensed", sans-serif;
   margin-top: 5vh;
   text-align: center;
+}
+
+button {
+  margin: auto;
+  display: block;
 }
 
 @media (max-width: 768px) {
@@ -784,6 +875,15 @@ button {
           flex-direction: column;
 }
 
+@media (max-width: 400px) {
+  .cardx .item p {
+    font-size: 0.8em;
+  }
+  .cardx .item h2 {
+    font-size: 1.2em;
+  }
+}
+
 .cardx .item img {
   width: 100%;
   -o-object-fit: cover;
@@ -795,10 +895,16 @@ button {
   font-size: 0.7em;
 }
 
+.cardx .item .price {
+  font-family: "Unica One", cursive;
+  font-size: 1.3em;
+}
+
 .cardx .item .increase div {
   display: inline-block;
   background-color: white;
   padding: 1vw 2vw;
+  margin-bottom: 3vw;
 }
 
 .cardx .center {

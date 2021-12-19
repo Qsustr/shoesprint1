@@ -1,0 +1,24 @@
+.sitetitle {
+  margin-top: 7vh;
+  margin-bottom: 3vh;
+}
+
+.sitetitleforms {
+  text-align: left;
+  margin-top: 10vh;
+  margin-bottom: 3vh;
+
+  @media (max-width: $tablet-width) {
+    margin-top: 7vh;
+  }
+}
+
+.accent {
+  color: getColour(accent);
+}
+
+.hide {
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}

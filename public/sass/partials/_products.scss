@@ -35,8 +35,22 @@
   }
 }
 
-///// export as product cards and customise featured instead, make product page default
-
 .sitetitle {
   text-align: center;
+
+  input {
+    width: 47%;
+    padding: 1vw;
+    font-style: italic;
+
+    @media (max-width: $tablet-width) {
+      width: 70%;
+      padding: 2vw;
+    }
+
+    @media (max-width: $mobile-width) {
+      width: 70%;
+      padding: 3vw;
+    }
+  }
 }
