@@ -59,7 +59,7 @@ async function getHero() {
     ///////needs to be replaces with <img src="${json.hero_banner.url}">
     heroContainer.innerHTML += `
     <div class="heroimage">
-    <img src="uploads/photo_1544085311_11a028465b03_29d7651dcc.jpeg">
+    <img src="${json.hero_banner.url}">
     </div>
     <div class="herotext">
     <h1>Shop your next running shoes here</h1>
