@@ -26,6 +26,7 @@ const details = await response.json();
 console.log(details);
 
 const productDetails = document.querySelector(".container-flex");
+const breadcrumb = document.querySelector(".breadcrumb ul");
 
 // const cart = document.querySelector(".cart");
 // const cartList = document.querySelector(".cart-list");
@@ -43,6 +44,8 @@ productDetails.innerHTML = `<div class="item">
                             <p>${details.description}</p>
                             <button class="product-button" data-product = "${details.id}">Add to cart</button>
                             </div>`;
+
+breadcrumb.innerHTML += `<li>${details.title}</li>`;
 
 const favButtons = document.querySelectorAll("button");
 

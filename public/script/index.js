@@ -5,7 +5,9 @@ const productsUrl = baseUrl + "products";
 
 createMenu(); ///needs to be in every js file
 
-const containerFeatured = document.querySelector(".product-container");
+const containerFeatured = document.querySelector(".cards");
+
+const imgcards = document.querySelector(".imagecards");
 
 //// products cards
 async function getFeatured() {
@@ -22,16 +24,15 @@ async function getFeatured() {
 
       /////img needs to be replaced with <img src="${json[i].image.url}">
 
-      containerFeatured.innerHTML += `<div class="cards">
+      containerFeatured.innerHTML += `
                                     <div class="card">
                                     <a href="details.html?id=${json[i].id}">
                                     <img src="uploads/photo_1491553895911_0055eca6402d_eaf84a6eb4.jpeg">
                                     <div class ="cardbody">
                                       <h4>${json[i].title}</h4>
-                                      <p>Price: ${json[i].price}</p>
+                                      <p>${json[i].price} $</p>
                                     </div>
                                   </a>
-                                  </div>
                                   </div>`;
     }
   } catch (error) {

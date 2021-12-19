@@ -22,13 +22,3 @@ $colours: (
 @function getColour($colour) {
   @return map-get($colours, $colour);
 }
-
-.accent {
-  color: getColour(accent);
-}
-
-.hide {
-  @media (max-width: $tablet-width) {
-    display: none;
-  }
-}

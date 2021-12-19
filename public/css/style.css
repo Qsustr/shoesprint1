@@ -1,13 +1,3 @@
-.accent {
-  color: #97fff3;
-}
-
-@media (max-width: 768px) {
-  .hide {
-    display: none;
-  }
-}
-
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -83,6 +73,14 @@ nav {
 nav a {
   color: white;
   padding: 1vw;
+}
+
+nav a:focus {
+  background-color: rgba(0, 0, 0, 0.456);
+}
+
+nav a:hover {
+  background-color: rgba(0, 0, 0, 0.456);
 }
 
 nav ion-icon {
@@ -237,6 +235,68 @@ nav .sidemenu {
   .hide {
     display: none;
   }
+}
+
+.breadcrumb {
+  text-align: center;
+  letter-spacing: 0.1em;
+  font-size: 0.7em;
+}
+
+.breadcrumb ul li {
+  display: inline-block;
+  text-transform: uppercase;
+  color: #7a7a7a;
+}
+
+.breadcrumb a:after {
+  content: " /";
+  padding: 1em;
+}
+
+.left {
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .left {
+    text-align: center;
+  }
+}
+
+.imagecards {
+  margin-bottom: 20vw;
+  text-align: center;
+}
+
+.imagecards:hover {
+  text-decoration: underline;
+  letter-spacing: 0.1em;
+}
+
+.imagecards .cardimg {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.imagecards .cardimg img {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.imagecards .cardimgtext {
+  text-transform: uppercase;
+  position: relative;
+  color: #424242;
+}
+
+.imagecards .cardimgtext p {
+  font-family: "barlow condensed", sans-serif;
+  font-size: 2em;
+}
+
+.imagecards .cardimgtext ion-icon {
+  font-size: 2em;
 }
 
 .form {
@@ -665,9 +725,14 @@ footer .thirdstrip ion-icon:focus {
 }
 
 .featuredtitle {
-  background-color: red;
+  background-color: #444a4d;
   width: 75%;
   margin: 0 auto;
+  color: white;
+  font-size: 0.6em;
+  padding: 0.1vw;
+  letter-spacing: 0.1vw;
+  text-transform: uppercase;
 }
 
 .cards {
@@ -693,12 +758,26 @@ footer .thirdstrip ion-icon:focus {
   row-gap: 5vh;
 }
 
+@media (max-width: 768px) {
+  .cards {
+    padding: 2vw;
+  }
+}
+
 .card {
   -webkit-box-flex: 0;
-      -ms-flex: 0 4 47%;
-          flex: 0 4 47%;
+      -ms-flex: 0 4 30%;
+          flex: 0 4 30%;
   width: 100%;
   margin: 0 auto;
+}
+
+@media (max-width: 400px) {
+  .card {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 60%;
+            flex: 0 1 60%;
+  }
 }
 
 .card img {
@@ -709,8 +788,19 @@ footer .thirdstrip ion-icon:focus {
 
 .card .cardbody {
   text-align: left;
-  background-color: red;
+  background-color: #efefef;
   padding: 3vw;
+}
+
+.card .cardbody h4 {
+  font-family: "Unica One", cursive;
+  text-transform: uppercase;
+}
+
+.card .cardbody p {
+  font-family: "barlow condensed", sans-serif;
+  font-size: 1.3em;
+  color: #005600;
 }
 
 .sitetitle {
@@ -792,6 +882,10 @@ footer .thirdstrip ion-icon:focus {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.details .container-flex .item p, .details footer .container .item p, footer .details .container .item p {
+  line-height: 2.7em;
 }
 
 .details .container-flex .detailsprice, .details footer .container .detailsprice, footer .details .container .detailsprice {
@@ -880,7 +974,7 @@ button {
     font-size: 0.8em;
   }
   .cardx .item h2 {
-    font-size: 1.2em;
+    font-size: 0.8em;
   }
 }
 
@@ -897,7 +991,7 @@ button {
 
 .cardx .item .price {
   font-family: "Unica One", cursive;
-  font-size: 1.3em;
+  font-size: 1.2em;
 }
 
 .cardx .item .increase div {

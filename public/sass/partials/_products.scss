@@ -4,9 +4,14 @@
 }
 
 .featuredtitle {
-  background-color: red;
+  background-color: getColour(secondary);
   width: 75%;
   margin: 0 auto;
+  color: white;
+  font-size: 0.6em;
+  padding: 0.1vw;
+  letter-spacing: 0.1vw;
+  text-transform: uppercase;
 }
 
 .cards {
@@ -15,13 +20,25 @@
   width: 75%;
   column-gap: 5vh;
   row-gap: 5vh;
+
+  @media (max-width: $tablet-width) {
+    padding: 2vw;
+  }
   //   flex-direction: column; ///breakpoint
 }
 
 .card {
-  flex: 0 4 47%;
+  flex: 0 4 30%;
   width: 100%;
   margin: 0 auto;
+
+  // @media (max-width: $tablet-width) {
+  //   flex: 0 4 30%;
+  // }
+
+  @media (max-width: $mobile-width) {
+    flex: 0 1 60%;
+  }
 
   img {
     width: 100%;
@@ -30,8 +47,19 @@
 
   .cardbody {
     text-align: left;
-    background-color: red;
+    background-color: getColour(grey);
     padding: 3vw;
+
+    h4 {
+      font-family: $font-special;
+      text-transform: uppercase;
+    }
+
+    p {
+      font-family: $font-heading-two;
+      font-size: 1.3em;
+      color: rgb(0, 86, 0);
+    }
   }
 }
 
