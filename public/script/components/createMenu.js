@@ -21,7 +21,7 @@ export default function createMenu() {
     <a href="productsEdit.html" class="hide${
       pathname === "/productsEdit.html" ? "active" : ""
     }">Edit Product</a>
-                <button id="logout"><ion-icon name="log-out-outline"></ion-icon> ${username}</button>`; ///style it using #logout in css width: auto;
+                <button id="logout"><ion-icon name="log-out-outline"></ion-icon><span class="text">${username}<span></button>`; ///style it using #logout in css width: auto;
   }
 
   console.log(username);

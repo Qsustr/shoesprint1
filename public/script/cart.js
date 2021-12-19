@@ -25,7 +25,7 @@ products.forEach((product) => {
                             <div class="item">
                             <h2>${product.title}</h2>
                             <p>Size: 36</p>
-                            <ion-icon name="trash-outline"></ion-icon>
+                            <p class="remove">Remove product</p>
                             </div>
                             <div class="item center">
                             <div class="increase">

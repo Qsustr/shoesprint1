@@ -13,6 +13,7 @@
       flex-direction: column;
       column-gap: 5vh;
       row-gap: 5vh;
+      text-align: center;
     }
     .item {
       flex: 1;
@@ -21,6 +22,17 @@
         width: 100%;
         object-fit: cover;
       }
+    }
+
+    .detailsprice {
+      margin-bottom: 2em;
+      margin-top: 2em;
+    }
+
+    .price {
+      font-family: $font-special;
+      font-size: 1.5em;
+      color: green;
     }
   }
 }

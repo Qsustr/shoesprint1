@@ -39,7 +39,7 @@ productDetails.innerHTML = `<div class="item">
                             
                             <div class="item">
                             <h1>${details.title}</h1>
-                            <p>${details.price}</p>
+                            <div class="detailsprice"><span class="price">${details.price}$</span></div>
                             <p>${details.description}</p>
                             <button class="product-button" data-product = "${details.id}">Add to cart</button>
                             </div>`;

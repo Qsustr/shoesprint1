@@ -4,9 +4,9 @@ import { getToken } from "../utils/logInStorage.js";
 export default function deleteButton(id) {
   const container = document.querySelector(".delete-container");
 
-  container.innerHTML = `<button type="button" class="delete">Delete</button>`;
+  container.innerHTML = `<button id="delete" class="my-custom-button">Delete product</button>`;
 
-  const button = document.querySelector("button.delete");
+  const button = document.querySelector("#delete");
 
   button.onclick = async function () {
     console.log(id);
